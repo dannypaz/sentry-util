@@ -1,0 +1,22 @@
+body {
+  padding-top: 40px;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.spinner.show {
+  display: inherit;
+}
+
+.spinner.hide {
+  display: none;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}

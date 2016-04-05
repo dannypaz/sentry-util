@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sentry Web Utility</title>
+  <link rel="stylesheet" href="public/reset.min.css" />
+  <link rel="stylesheet" href="public/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/main.css" />
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Sentry Web Utility</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="starter-template">
+      <div class="row">
+        <form action="/events" method="GET">
+          <div class="col-md-12 text-center">
+            <button id="getPages" class="btn btn-success" type="submit">Get Pages</button>
+          </div>
+          <div class="col-md-12 text-center">
+            <img id="spinner" class="spinner hide" src="http://phette23.github.io/speed-is-a-feature/img/loadingBar.gif" />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        {{#dataAvailable}}
+          <div class="col-md-12 text-center">
+            <h2>Affected Domains: </h2>
+          </div>
+          <div class="col-ms-12 text-center">
+            <ol>
+              {{#domains}}
+                <li>{{.}}</li>
+              {{/domains}}
+            </ol>
+          </div>
+        {{/dataAvailable}}
+      </div>
+    </div>
+  </div>
+
+  <script src="public/loader.js"></script>
+</body>
+</html>

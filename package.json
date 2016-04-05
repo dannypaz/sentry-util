@@ -1,0 +1,24 @@
+{
+  "name": "csrf-sentry-util",
+  "version": "1.0.0",
+  "description": "Utility to grab event data from Sentry's WEB API",
+  "main": "./src/server.js",
+  "engines": {
+    "node": "4.3.0"
+  },
+  "scripts": {
+    "postinstall": "node -r dotenv/config ./src/server.js",
+    "start": "node -r dotenv/config ./src/server.js"
+  },
+  "author": "THC",
+  "license": "ISC",
+  "dependencies": {
+    "curlrequest": "0.5.6",
+    "dotenv": "2.0.0",
+    "express": "4.13.4",
+    "lodash": "4.3.0",
+    "mustache-express": "1.2.2",
+    "node-libcurl": "0.7.0",
+    "parse-link-header": "0.4.1"
+  }
+}
